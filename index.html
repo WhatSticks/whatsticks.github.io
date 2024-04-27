@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 What Sticks</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Source+Sans+3:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #FFF;
+            --secondary-color: #CCFF19;
+
+            --primary-font: 'Arial', sans-serif;
+            --secondary-font: 'Courier New', monospace;
+
+            --primary-font-size: 16px;
+
+            --background-color-start: #0047FF;
+            --background-color-end: #200BB2;
+        }
+
+        .source-sans-3-regular {
+            font-family: "Source Sans 3", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Reset */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html:focus-within {
+            scroll-behavior: smooth;
+        }
+
+        img,
+        picture,
+        svg,
+        video,
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html:focus-within {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+                transition: none;
+            }
+        }
+
+        /* End Reset */
+
+        html,
+        body {
+            height: 100%;
+            font-size: var(--primary-font-size);
+            color: var(--primary-color);
+            font-family: "Source Sans 3", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #logo {
+            background: linear-gradient(var(--background-color-start), var(--background-color-end));
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        #logo>img {
+            max-width: 500px;
+
+            display: block;
+            margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        }
+
+        #content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: calc(100% - 150px);
+            font-size: 1.125rem;
+        }
+
+        #content>.wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 50px 0;
+            background-color: var(--background-color-start);
+            border-radius: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+
+        #content>.wrapper>div {
+            margin: 0 8.33%;
+        }
+
+        .title {
+            color: var(--secondary-color);
+            font-size: 1.875rem;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--secondary-color);
+            font-size: 1rem;
+            font-family: "Source Sans 3", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .leonard-image {
+            background-image: url("assets/leonard.png");
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            max-height: 600px;
+            aspect-ratio: 1;
+            margin: 0 !important;
+        }
+
+        #socials {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 100%;
+        }
+
+        #socials img {
+            width: 70px;
+            height: 70px;
+        }
+
+        #socials>a:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="logo">
+        <img src="assets/logo.svg" alt="What Sticks logo">
+    </div>
+
+    <div id="content" role="main">
+        <div class="wrapper">
+            <div class="title">
+                We create stuff, we test ideas&hellip; and we keep what sticks.
+            </div>
+
+            <div>
+                We are an incredible collective of two talented french people. And that's already not bad. We love
+                making games, and we want to do it well. So we take the time we need to prepare something that people
+                will enjoy. Our next game is in preparation, we're just getting started... Stay tuned!
+            </div>
+
+            <div class="leonard-image">
+                &nbsp;
+            </div>
+
+            <div class="title">
+                Our very first project, A subtly strange adventure game
+            </div>
+
+            <div>
+                While returning home, Leonard lost control of his car and ended up in a ditch. He regains consciousness
+                in the room of a small inn, in the middle of an isolated country village. While his memory fails him, he
+                will meet a series of strange characters who will each in their own way allow him to reflect on the
+                meaning of his life.
+            </div>
+
+            <div class="subtitle">
+                Are you interested in this story? We tell you about our ongoing development and its twists and turns on
+                our social networks.
+            </div>
+
+            <div id="socials">
+                <a href="https://whatsticks.itch.io/" target="_blank">
+                    <img src="assets/socials/itch-io.png" alt="itch.io">
+                </a>
+                <a href="https://twitter.com/WhatSticksGames" target="_blank">
+                    <img src="assets/socials/x.png" alt="X">
+                </a>
+                <a href="https://www.instagram.com/whatsticksgames" target="_blank">
+                    <img src="assets/socials/instagram.png" alt="Instagram">
+                </a>
+                <!-- <a href="" target="_blank">
+                    <img src="assets/socials/youtube.png" alt="YouTube">
+                </a> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
