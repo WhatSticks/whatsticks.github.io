@@ -114,8 +114,11 @@
         html,
         body {
             height: 100%;
-            font-size: var(--primary-font-size);
+
+            background: linear-gradient(to right, var(--background-color-start), var(--background-color-end));
+
             color: var(--primary-color);
+            font-size: var(--primary-font-size);
             font-family: "Source Sans 3", sans-serif;
             font-optical-sizing: auto;
             font-weight: 400;
@@ -123,8 +126,6 @@
         }
 
         #logo {
-            background: linear-gradient(to right, var(--background-color-start), var(--background-color-end));
-
             position: fixed;
             top: 0;
             left: 0;
@@ -153,7 +154,7 @@
             position: absolute;
             left: 50%;
             right: 0;
-            top: 100vh;
+            top: 100dvh;
             font-size: 1.125rem;
             transform: translate(-50%, calc(-1 * var(--gap-size)));
         }
