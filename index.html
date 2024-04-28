@@ -43,6 +43,10 @@
 
             --background-color-start: #0047FF;
             --background-color-end: #200BB2;
+
+            --logo-size: 31.25rem;
+            --container-size: 37.5rem;
+            --gap-size: 3.125rem;
         }
 
         .source-sans-3-regular {
@@ -131,7 +135,8 @@
         }
 
         #logo>img {
-            max-width: 500px;
+            width: calc(100% - (var(--gap-size) * 2));
+            max-width: var(--logo-size);
 
             display: block;
             margin: 0 auto;
@@ -142,29 +147,35 @@
         }
 
         #content {
+            width: 100%;
+            max-width: var(--container-size);
+
             position: absolute;
-            left: 0;
+            left: 50%;
             right: 0;
-            top: calc(100% - 150px);
+            top: 100vh;
             font-size: 1.125rem;
-            margin: 25px;
+            transform: translate(-50%, calc(-1 * var(--gap-size)));
         }
 
         #content>.wrapper {
+            width: 100%;
+            max-width: 100%;
+
+            background-color: var(--background-color-start);
+            border-radius: 30px;
+
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 50px;
-            padding: 50px 0;
-            background-color: var(--background-color-start);
-            border-radius: 30px;
-            max-width: 600px;
+            gap: var(--gap-size);
+            padding: var(--gap-size) 0;
             margin: 0 auto;
-            margin-bottom: 50px;
+            margin-bottom: var(--gap-size);
         }
 
         #content>.wrapper>div {
-            margin: 0 8.33%;
+            margin: 0 var(--gap-size);
         }
 
         .title {
@@ -186,22 +197,25 @@
         }
 
         .leonard-image {
-            background-image: url("assets/leonard.png");
-            background-size: cover;
             width: 100%;
             height: 100%;
-            max-height: 600px;
+            max-height: var(--container-size);
             aspect-ratio: 1;
+
+            background-image: url("assets/leonard.png");
+            background-size: cover;
+
             margin: 0 !important;
         }
 
         #socials {
+            max-width: 100%;
+
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
-            max-width: 100%;
         }
 
         #socials img {
@@ -215,14 +229,12 @@
 
         /* Media Queries */
         @media (max-width: 600px) {
-            #content>.wrapper {
-                margin-bottom: 25px;
-                padding: 25px 0;
-                gap: 25px;
+            :root {
+                --gap-size: 1.5625rem;
             }
 
-            #content>.wrapper>div {
-                margin: 0 5%;
+            #content {
+                padding: 0 var(--gap-size);
             }
 
             .title {
