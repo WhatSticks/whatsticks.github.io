@@ -156,7 +156,7 @@
             right: 0;
             top: 100dvh;
             font-size: 1.125rem;
-            transform: translate(-50%, calc(-1 * var(--gap-size)));
+            transform: translate(-50%, calc(-2 * var(--gap-size)));
         }
 
         #content>.wrapper {
@@ -230,12 +230,10 @@
 
         /* Media Queries */
         @media (max-width: 600px) {
-            :root {
-                --gap-size: 1.5625rem;
-            }
-
-            #content {
-                padding: 0 var(--gap-size);
+            #content>.wrapper {
+                margin: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
             }
 
             .title {
